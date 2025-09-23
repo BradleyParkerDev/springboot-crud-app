@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: springboot-crud-app
+
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/springboot_crud_app
+    username: postgres
+    password: password
+
+  flyway:
+    enabled: true
+    url: jdbc:postgresql://localhost:5432/springboot_crud_app
+    user: postgres
+    password: password
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
