@@ -19,6 +19,6 @@ public class WebController {
 
     @GetMapping(value = "/", produces = "application/json")
     public Map<String, String> index() {
-        return Map.of("message", "Hello, Bradley!");
+        return Map.of("message", "Hello, World!");
     }
 }
